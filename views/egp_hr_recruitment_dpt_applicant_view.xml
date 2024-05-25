@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        Adding position_rank,province  fields to hr_applicant model-->
+        <record id="hr_applicant_form" model="ir.ui.view">
+            <field name="name">egp_hr_applicant.form</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='interviewer_ids']" position="before">
+                    <field name="position_code" style="font-size: 13px;"/>
+                    <field name="position_rank_id" style="font-size: 13px;"/>
+                </xpath>
+                <xpath expr="//field[@name='email_from']" position="before">
+                    <field name="Father_name" style="font-size: 13px;"/>
+                    <field name="gender" style="font-size: 13px;"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_phone']" position="after">
+                    <field name="province" style="font-size: 13px;"/>
+                    <field name="native_language" style="font-size: 13px;"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_name']" position="attributes">
+                    <attribute name="placeholder">Shafiqullah Hamdard</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='source_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='medium_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='availability']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='recruitment_contract']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="recruitment_stage_search_view_inherited" model="ir.ui.view">
+            <field name="name">egp_hr.recruitment.stage.search.view</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_search_bis"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='hired']" position="after">
+                    <filter string="Long List" name="stage_id" domain="[('stage_id.name', '=','Long list')]"/>
+                    <filter string="Short List" name="stage_id" domain="[('stage_id.name', '=','Short list')]"/>
+                    <filter string="Written Test" name="stage_id" domain="[('stage_id.name', '=','Written test')]"/>
+                    <filter string="Interview" name="stage_id" domain="[('stage_id.name',    '=','Interview')]"/>
+                    <filter string="Success" name="stage_id" domain="[('stage_id.name', '=','Success')]"/>
+                    <group expand="0" string="Group By" colspan="4">
+                        <filter string="Stage Type" name="stage_id" domain="[]"
+                                context="{'group_by':'stage_id'}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

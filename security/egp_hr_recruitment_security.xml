@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_resume_line_rule_recruitment_amir" model="ir.rule">
+        <field name="name">manager can create resume_line_record</field>
+        <field name="model_id" ref="hr_skills.model_hr_resume_line"/>
+        <field name="groups"
+               eval="[(4, ref('egp_hr.group_recruitment_amir')), (4, ref('egp_hr.group_recruitment_Karshanas'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>
+    <record id="hr_employee_recruitment_amir" model="ir.rule">
+        <field name="name">manager can create hr_employee record</field>
+        <field name="model_id" ref="hr.model_hr_employee"/>
+        <field name="groups"
+               eval="[(4, ref('egp_hr.group_recruitment_amir')), (4, ref('egp_hr.group_recruitment_Karshanas'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>
+
+    <record id="egp_hr_applicant_form_view" model="ir.ui.view">
+        <field name="name">egp.hr.applicant.form.view</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='create_employee_from_applicant']" position="attributes">
+                <attribute name="groups"
+                           add="egp_hr.group_recruitment_amir,base.group_erp_manager,egp_hr.group_recruitment_Karshanas"
+                           separater=","/>
+            </xpath>
+        </field>
+    </record>
+    <record id="egp_hr_job_kanban_view" model="ir.ui.view">
+        <field name="name">egpـhr.job.kanban.view</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr_recruitment.view_hr_job_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='kanban_boxes']" position="attributes">
+                <attribute name="groups"
+                           add="base.group_erp_manager,egp_hr.group_recruitment_amir,egp_hr.group_recruitment_Karshanas"
+                           separator=","/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+

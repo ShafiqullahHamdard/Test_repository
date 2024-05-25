@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_job_summary" model="ir.actions.report">
+            <field name="name">Print</field>
+            <field name="model">hr.job</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">egp_hr.report_job_summary</field>
+            <field name="report_file">egp_hr.report_job_summary</field>
+            <field name="binding_model_id" ref="model_hr_job"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="egp_hr.report_paperformat_a4"/>
+        </record>
+
+        <template id="report_job_summary">
+            <link rel="stylesheet" href="egp_hr/static/src/css/rtl_direction.css"/>
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <div class="page" style="font-family: Calibri;">
+                            <div class="row">
+                                <div class="col-4" style="margin-left: 0; text-align: left;">
+                                    <div class="text-left" style="text-align: left;">
+                                        <img src="egp_hr/static/description/logo.png" height="150px;" width="130px;"
+                                             alt="Left Logo"/>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="content" style="text-align: center;">
+                                        <h5>Islamic Emirates of Afghanistan</h5>
+                                        <p>Ministry of Information and Telecommunication</p>
+                                        <p>Directorate of Human Resource</p>
+                                        <!-- Content goes here -->
+                                    </div>
+                                </div>
+                                <div class="col-4" style="margin-right: 0; text-align: right;">
+                                    <div class="text-right">
+                                        <img src="egp_hr/static/description/eia.png" height="150px;" width="130px;"
+                                             alt="Right Logo"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Job Summary for Civil Employees</h4>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <tr>
+                                        <td>Position Name</td>
+                                        <td>
+                                            <t t-esc="doc.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Year</td>
+                                        <td>
+                                            <t t-esc="doc.organization_year"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td>
+                                            <t t-esc="doc.position_rank_id.position_rank"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code</td>
+                                        <td>
+                                            <t t-esc="doc.code"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>
+                                            <t t-esc="doc.position_status_id.position_status"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location</td>
+                                        <td>
+                                            <t t-esc="doc.work_location_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Department</td>
+                                        <td>
+                                            <t t-esc="doc.department_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of Target Employees</td>
+                                        <td>
+                                            <t t-esc="doc.no_of_recruitment"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Report from</td>
+                                        <td>
+                                            <t t-esc="doc.report_from.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Report to</td>
+                                        <td>
+                                            <t t-esc="doc.report_to_id.name"/>
+                                        </td>
+                                    </tr>
+                                </tr>
+                            </table>
+                            <div class="col-12">
+                                <p>
+                                    <t t-esc="doc.description"/>
+                                </p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+            <footer>
+                <div class="footer" style="top-margin:600px;">
+                </div>
+            </footer>
+        </template>
+    </data>
+</odoo>

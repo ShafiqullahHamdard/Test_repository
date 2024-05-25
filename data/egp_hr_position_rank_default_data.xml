@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        position.rank default data is created-->
+        <record id="position_rank_default_records_out_of_rank" model="position.rank">
+            <field name="position_rank"><![CDATA[خارج رتبه]]></field>
+        </record>
+        <record id="position_rank_default_records_superior_rank" model="position.rank">
+            <field name="position_rank"><![CDATA[مافوق رتبه]]></field>
+        </record>
+        <record id="position_rank_default_records_1_rank" model="position.rank">
+            <field name="position_rank">1</field>
+        </record>
+        <record id="position_rank_default_records_2_rank" model="position.rank">
+            <field name="position_rank">2</field>
+        </record>
+        <record id="position_rank_default_records_3_rank" model="position.rank">
+            <field name="position_rank">3</field>
+        </record>
+        <record id="position_rank_default_records_4_rank" model="position.rank">
+            <field name="position_rank">4</field>
+        </record>
+        <record id="position_rank_default_records_5_rank" model="position.rank">
+            <field name="position_rank">5</field>
+        </record>
+        <record id="position_rank_default_records_6_rank" model="position.rank">
+            <field name="position_rank">6</field>
+        </record>
+        <record id="position_rank_default_records_7_rank" model="position.rank">
+            <field name="position_rank">7</field>
+        </record>
+        <record id="position_rank_default_records_8_rank" model="position.rank">
+            <field name="position_rank">8</field>
+        </record>
+    </data>
+</odoo>

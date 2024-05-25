@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Position Status -->
+        <!-- Form View for position.status-->
+        <record id="view_position_status_form" model="ir.ui.view">
+            <field name="name">position.status.form</field>
+            <field name="model">position.status</field>
+            <field name="arch" type="xml">
+                <form string="Position Status">
+                    <sheet>
+                        <group>
+                            <field name="position_status"/>
+                            <field name="color" widget="color_picker"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" options="{'open_attachments': True}"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View of position.status -->
+        <record id="view_position_status_tree" model="ir.ui.view">
+            <field name="name">position.status.tree</field>
+            <field name="model">position.status</field>
+            <field name="arch" type="xml">
+                <tree string="Position Statuses">
+                    <field name="position_status"/>
+                    <field name="color" widget="color_picker"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for position.status -->
+        <record id="position_status_action" model="ir.actions.act_window">
+            <field name="name">Add Position Status</field>
+            <field name="res_model">position.status</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Position Status
+                </p>
+            </field>
+        </record>
+        <!-- Menu for Position.status -->
+        <menuitem
+                id="position_status_menu"
+                name="Position Status"
+                parent="hr.menu_config_recruitment"
+                action="position_status_action"
+                groups="egp_hr.group_tashkil_karshnas,egp_hr.group_tashkil_ameriat"
+                sequence="22"/>
+    </data>
+</odoo>

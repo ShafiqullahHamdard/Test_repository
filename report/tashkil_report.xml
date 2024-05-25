@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_tashkil" model="ir.actions.report">
+            <field name="name">Print</field>
+            <field name="model">egp.tashkil</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">egp_hr.report_tashkil</field>
+            <field name="report_file">egp_hr.report_tashkil</field>
+            <field name="binding_model_id" ref="egp_hr.model_egp_tashkil"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="egp_hr.report_paperformat_a4"/>
+        </record>
+
+        <template id="report_tashkil">
+            <link rel="stylesheet" href="egp_hr/static/src/css/rtl_direction.css"/>
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <div class="page" style="font-family: Calibri;">
+                            <div class="row">
+                                <div class="col-4" style="margin-left: 0; text-align: left;">
+                                    <div class="text-left" style="text-align: left;">
+                                        <img src="egp_hr/static/description/logo.png" height="150px;" width="130px;"
+                                             alt="Left Logo"/>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="content" style="text-align: center;">
+                                        <h5>Islamic Emirates of Afghanistan</h5>
+                                        <p>Ministry of Information and Telecommunication</p>
+                                        <p>Directorate of Human Resource</p>
+                                        <!-- Content goes here -->
+                                    </div>
+                                </div>
+                                <div class="col-4" style="margin-right: 0; text-align: right;">
+                                    <div class="text-right">
+                                        <img src="egp_hr/static/description/eia.png" height="150px;" width="130px;"
+                                             alt="Right Logo"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 style="font-weight: bold; background-color: #F2F2F2; text-align: center;">Formation
+                                    Report
+                                </h2>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead style="margin-right: 0; text-align: left;">
+                                    <tr>
+                                        <th style="font-weight: bold; background-color: #F2F2F2;">Tashkil Name</th>
+                                        <td>
+                                            <t t-esc="doc.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: bold; background-color: #F2F2F2;">Tashkil Year</th>
+                                        <td>
+                                            <t t-esc="doc.tashkil_year"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: bold; background-color: #F2F2F2;">Sequence Number</th>
+                                        <td>
+                                            <t t-esc="doc.sequence_number"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: bold; background-color: #F2F2F2;">Description</th>
+                                        <td>
+                                            <t t-esc="doc.description"/>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <table class="table table-bordered">
+                                <h3 style="margin-right: 0; text-align: Center;">Formation Details</h3>
+                                <thead style="margin-right: 0; text-align: center;">
+                                    <tr style="font-weight: bold; background-color: #F2F2F2;">
+
+                                        <th>#</th>
+                                        <th>Position Name</th>
+                                        <th>Creation Year</th>
+                                        <th>Position Code</th>
+                                        <th>Position Rank</th>
+                                        <th>Position Status</th>
+                                        <th>Position Department</th>
+                                    </tr>
+                                </thead>
+                                <tr style="margin-right: 0; text-align: center;">
+                                    <t t-set="counter" t-value="1"/>
+                                    <t t-foreach="doc.job_position_ids" t-as="job_position">
+                                        <tr style="margin-right: 0; text-align: center;">
+                                            <td><t t-esc="counter"/></td>
+                                            <t t-set="counter" t-value="counter+1"/>
+                                            <td>
+                                                <t t-esc="job_position.inherited_job_id.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="job_position.organization_year"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="job_position.code"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="job_position.position_rank_id.position_rank"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="job_position.position_status_id.position_status"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="job_position.inherited_department_id.name"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+            <footer>
+                <div class="footer" style="top-margin:600px;">
+                </div>
+            </footer>
+        </template>
+    </data>
+</odoo>

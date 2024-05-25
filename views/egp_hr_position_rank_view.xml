@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Position Rank -->
+        <!-- Form View for position.rank-->
+        <record id="view_position_rank_form" model="ir.ui.view">
+            <field name="name">position.rank.form</field>
+            <field name="model">position.rank</field>
+            <field name="arch" type="xml">
+                <form string="Position Rank">
+                    <sheet>
+                        <group>
+                            <field name="position_rank"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" options="{'open_attachments': True}"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View position.rank-->
+        <record id="view_position_rank_tree" model="ir.ui.view">
+            <field name="name">position.rank.tree</field>
+            <field name="model">position.rank</field>
+            <field name="arch" type="xml">
+                <tree string="Position Ranks">
+                    <field name="position_rank"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for position.rank-->
+        <record id="position_rank_action" model="ir.actions.act_window">
+            <field name="name">Add Position Rank</field>
+            <field name="res_model">position.rank</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Position Rank
+                </p>
+            </field>
+        </record>
+        <!-- Menu for Position Rank -->
+        <menuitem
+                id="position_rank_menu"
+                name="Position Ranks"
+                parent="hr.menu_config_recruitment"
+                action="position_rank_action"
+                groups="egp_hr.group_tashkil_karshnas,egp_hr.group_tashkil_ameriat"
+                sequence="21"/>
+
+    </data>
+</odoo>

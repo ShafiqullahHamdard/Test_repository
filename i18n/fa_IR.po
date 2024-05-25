@@ -1,0 +1,408 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* egp_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-02 10:26+0000\n"
+"PO-Revision-Date: 2024-05-02 10:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: egp_hr
+#: model:ir.actions.act_window,name:egp_hr.position_rank_action
+msgid "Add Position Rank"
+msgstr "افزودن درجه بست"
+
+#. module: egp_hr
+#: model:ir.actions.act_window,name:egp_hr.position_status_action
+msgid "Add Position Status"
+msgstr "افزودن حالت بست"
+
+#. module: egp_hr
+#: model:ir.model,name:egp_hr.model_hr_applicant
+msgid "Applicant"
+msgstr "متقاضی"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_department__code
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__code
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_search_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Code"
+msgstr "کوډ"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__color
+msgid "Color"
+msgstr "رنگ پس زمینه"
+
+#. module: egp_hr
+#: model_terms:ir.actions.act_window,help:egp_hr.position_rank_action
+msgid "Create a new Position Rank"
+msgstr "درجه بست نو ایجاد کیند"
+
+#. module: egp_hr
+#: model_terms:ir.actions.act_window,help:egp_hr.position_status_action
+msgid "Create a new Position Status"
+msgstr "حالت بست نو ایجاد کیند"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__create_uid
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__create_date
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: egp_hr
+#: model:ir.model,name:egp_hr.model_hr_department
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Department"
+msgstr "دپارتمان"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Description"
+msgstr "توضیحات"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Directorate of Human Resource"
+msgstr "ریاست منابع بشري"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__display_name
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__display_name
+msgid "Display Name"
+msgstr "نمایش اسم"
+
+#. module: egp_hr
+#: model:res.groups,name:egp_hr.group_tashkil_karshnas
+msgid "Expert/Karshanas"
+msgstr "کارشناس"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__id
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__id
+msgid "ID"
+msgstr "ای ډي"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Islamic Emirates of Afghanistan"
+msgstr "امارت اسلامي افغانستان"
+
+#. module: egp_hr
+#: model:res.groups,name:egp_hr.group_tashkil_Layha_Wazaif_Karmand
+msgid "Job Des. Writer"
+msgstr "مدیر لایحه وظایف"
+
+#. module: egp_hr
+#: model:ir.model,name:egp_hr.model_hr_job
+msgid "Job Position"
+msgstr "موقعیت شغلی"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Job Summary for Civil Employees"
+msgstr "لایحه وظایف کارمندان خدمات ملکي"
+
+#. module: egp_hr
+#: model:ir.model.fields.selection,name:egp_hr.selection__hr_job__view_type__kanban
+msgid "Kanban"
+msgstr ""
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__write_uid
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__write_date
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Left Logo"
+msgstr "لوګو وزارت"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Location"
+msgstr "موقعیت"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Ministry of Information and Telecommunication"
+msgstr "وزارت مخابرات و تکنالوژي معلوماتي"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Number of Target Employees"
+msgstr "تعدات بست"
+
+#. module: egp_hr
+#: model:res.groups,name:egp_hr.group_tashkil_ameriat
+msgid "Officer/Amir"
+msgstr "امر"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_department_tree
+msgid "Organization Year"
+msgstr "سال"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Position Name"
+msgstr "بست"
+
+#. module: egp_hr
+#: model:ir.model,name:egp_hr.model_position_rank
+#: model_terms:ir.ui.view,arch_db:egp_hr.view_position_rank_form
+msgid "Position Rank"
+msgstr "درجه بست"
+
+#. module: egp_hr
+#: model:ir.ui.menu,name:egp_hr.position_rank_menu
+#: model_terms:ir.ui.view,arch_db:egp_hr.view_position_rank_tree
+msgid "Position Ranks"
+msgstr "درجات بست"
+
+#. module: egp_hr
+#: model:ir.model,name:egp_hr.model_position_status
+#: model:ir.ui.menu,name:egp_hr.position_status_menu
+#: model_terms:ir.ui.view,arch_db:egp_hr.view_position_status_form
+msgid "Position Status"
+msgstr "حالت بست"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.view_position_status_tree
+msgid "Position Statuses"
+msgstr "حالات بست"
+
+#. module: egp_hr
+#: model:ir.actions.report,name:egp_hr.action_report_job_summary
+msgid "Print"
+msgstr "چاپ"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_department__position_rank_id
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__position_rank_id
+#: model:ir.model.fields,field_description:egp_hr.field_position_rank__position_rank
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_search_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Rank"
+msgstr "درجه"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__report_from
+msgid "Report From"
+msgstr "ګزارش ګرینده"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__report_to_id
+msgid "Report To"
+msgstr "ګزارش دهنده"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Report from"
+msgstr "ګزارش ګرینده"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Report to"
+msgstr "ګزارش دهنده"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Right Logo"
+msgstr "لوګو راست"
+
+#. module: egp_hr
+#: model:ir.model.fields,help:egp_hr.field_hr_job__report_from
+msgid "Select job positions to associate as reports"
+msgstr "بست ها را طبق راپور ها انتخاب کنید"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_department__position_status_id
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__position_status_id
+#: model:ir.model.fields,field_description:egp_hr.field_position_status__position_status
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_search_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Status"
+msgstr "حالت"
+
+#. module: egp_hr
+#: model:res.groups,name:egp_hr.group_mcit_hrmis_tashkilat_super_user
+msgid "Super User"
+msgstr "یوز صلاحیت دار"
+
+#. module: egp_hr
+#: model:ir.module.category,description:egp_hr.Category
+msgid "Tashkilat Amiriat"
+msgstr "وزارت مخابرات و تکنالوژي معلوماتي- سیستم منابع بشري"
+
+#. module: egp_hr
+#: model:ir.module.category,name:egp_hr.Category
+msgid "Tashkilat Department"
+msgstr "وزارت مخابرات و تکنالوژي معلوماتي- سیستم منابع بشري- امریت تشکیلات"
+
+#. module: egp_hr
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Title"
+msgstr "عنوان"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__view_type
+msgid "View Type"
+msgstr ""
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__work_location_id
+msgid "Work Location"
+msgstr "ادرس وظیفوي"
+
+#. module: egp_hr
+#: model:ir.model.fields,field_description:egp_hr.field_hr_department__organization_year
+#: model:ir.model.fields,field_description:egp_hr.field_hr_job__organization_year
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_form_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_search_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.egp_hr_job_tree_view
+#: model_terms:ir.ui.view,arch_db:egp_hr.report_job_summary
+msgid "Year"
+msgstr "سال"
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_4
+msgid "امر انکشاف سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_5
+msgid "امر تحلیل و ډیزاین سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_8
+msgid "امریت انکشاف سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_10
+msgid "امریت تحلیل و ډیزان سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_9
+msgid "امریت تضمین کیفیت و انسجام سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.contract.type,name:egp_hr.hr_contract_type_default_records_temporary
+msgid "باالمقطع"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.contract.type,name:egp_hr.hr_contract_type_default_records_permanent
+msgid "دایمي"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_6
+msgid "ریاست انسجام و تظمین کیفیت ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_7
+msgid "ریاست ساده سازی پروسها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_5
+msgid "ریاست سیستم سازی"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_4
+msgid "ریاست عمومی حکومت داری دیجیتلی"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_2
+msgid "ریس تضمین کیفیت سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_3
+msgid "ریس ساده سازی پروسها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_1
+msgid "ریس سیستم سازی"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_0
+msgid "ریس عمومي حکومتداری دیجیتلي"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.contract.type,name:egp_hr.hr_contract_type_default_records_contracted
+msgid "قراردادي"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_7
+msgid "متخصیص انکشاف سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_6
+msgid "متخصیص تحلیل و ډیزاین سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_8
+msgid "متخصیص تلفیق سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_3
+msgid "معنیت مالي و اداري"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_2
+msgid "معینیت تخنیکي و مسلکي"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.department,name:egp_hr.hr_department_default_records_1
+msgid "مقام وزارت"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_9
+msgid "کارشناس انکشاف سیستم ها"
+msgstr ""
+
+#. module: egp_hr
+#: model:hr.job,name:egp_hr.hr_job_default_records_10
+msgid "کارشناس تلفیق سیستم ها"
+msgstr ""

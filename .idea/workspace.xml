@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3377d968-7724-458c-83aa-dd72ce2651a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/egp_hr_job_default_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/egp_hr_job_default_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/egp_hr_job.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/egp_hr_job.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/egp_hr_security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/egp_hr_security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/egp_hr_job_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/egp_hr_job_view.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2fuDRVp5G5pRsCnzh3iBN6YkGQK" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3377d968-7724-458c-83aa-dd72ce2651a3" name="Changes" comment="" />
+      <created>1714642062616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714642062616</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- extended and inherited form for hr.job view -->
+    <record id="egp_hr_job_form_view" model="ir.ui.view">
+        <field name="name">egp.hr.job.form.view</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <group>
+                    <field name="organization_year"
+                           style="font-size: 13px;" required="1" groups="egp_hr.group_tashkil_Layha_Wazaif_Karmand"/>
+                    <field name="position_rank_id" style="font-size: 13px;" options="{'no_create': True}"/>
+                    <field name="code" style="font-size: 13px;"/>
+                    <field name="position_status_id" style="font-size: 13px;"/>
+                    <field name="work_location_id" style="font-size: 13px;" options="{'no_create': True}"/>
+                    <field name="report_from" style="font-size: 13px;" widget="many2many_tags"
+                           options="{'no_create': True}"/>
+                    <field name="report_to_id" style="font-size: 13px;" options="{'no_create': True}"/>
+                    <!--                    <field name="color" widget="color_picker"/>-->
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="placeholder">Odoo Senior Developer</attribute>
+            </xpath>
+            <xpath expr="//field[@name='interviewer_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='alias_name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='description']" position="attributes">
+<!--                <attribute name="groups"-->
+<!--                           add="egp_hr.group_tashkil_ameriat,egp_hr.group_tashkil_karshnas,egp_hr.group_tashkil_Layha_Wazaif_Karmand"-->
+<!--                           separator=","/>-->
+            </xpath>
+        </field>
+    </record>
+    <!-- extended inherited tree view for hr.job  -->
+    <record id="egp_hr_job_tree_view" model="ir.ui.view">
+        <field name="name">egp.hr.job.tree.view</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="organization_year" string="Year" required="1"/>
+                <field name="code"/>
+                <field name="position_rank_id"/>
+                <field name="position_status_id"/>
+                <field name="report_from" widget="many2many_tags"/>
+                <field name="report_to_id"/>
+                <field name="work_location_id"/>
+            </xpath>
+            <xpath expr="//field[@name='no_of_recruitment']" position="after">
+                <field name="color" widget="color_picker"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- extended inherited search view for hr.job  -->
+
+    <record id="egp_hr_job_search_view" model="ir.ui.view">
+        <field name="name">egp.hr.job.search.view</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_job_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="organization_year" string="Year"/>
+                <field name="position_rank_id" string="Rank"/>
+                <field name="code" string="Code"/>
+                 <separator/>
+                <filter name="position_status_id_carried_over" string="Carried from Last Year"
+                        domain="[('position_status_id', '=', 'Carried from Last Year')]"/>
+                <filter name="position_status_id_newly_created" string="Newly Created"
+                        domain="[('position_status_id', '=', 'Newly Created')]"/>
+                <separator/>
+                <filter name="position_status_id_changed" string="Changed"
+                        domain="[('position_status_id', '=', 'Changed')]"/>
+                <separator/>
+                <filter name="position_status_id_cancelled" string="Cancelled"
+                        domain="[('position_status_id', '=', 'Cancelled')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <separator/>
+                    <filter name="group_year" string="Year" domain="[]"
+                            context="{'group_by':'organization_year'}"/>
+                    <separator/>
+                    <filter name="group_rank" string="Rank" domain="[]"
+                            context="{'group_by':'position_rank_id'}"/>
+                    <separator/>
+                    <filter name="group_status" string="Status" domain="[]"
+                            context="{'group_by':'position_status_id'}"/>
+                    <separator/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

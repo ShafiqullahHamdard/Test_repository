@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record id="egp_hr_default_user_amir" model="res.users">
+            <field name="name"><![CDATA[امر تشکیل]]></field>
+            <field name="login">t_amir@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+        <record id="egp_hr_default_user_karshanas" model="res.users">
+            <field name="name"><![CDATA[کارشناس تشکیل]]></field>
+            <field name="login">t_karshanas@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+        <record id="egp_hr_default_user_job_des_writer" model="res.users">
+            <field name="name"><![CDATA[مدیر لایحه وظایف]]></field>
+            <field name="login">t_job.des.writer@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+
+        <record id="egp_hr_default_user_recruitment_amir" model="res.users">
+            <field name="name"><![CDATA[امر استخدام]]></field>
+            <field name="login">r_amir@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+        <record id="egp_hr_default_user_recruitment_karshanas" model="res.users">
+            <field name="name"><![CDATA[کارشناس استخدام]]></field>
+            <field name="login">r_karshanas@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+        <record id="egp_hr_default_user_recruitment_idcard_manager" model="res.users">
+            <field name="name"><![CDATA[مدیر ای ډي کارت]]></field>
+            <field name="login">r_idcardmanager@gmail.com</field>
+            <field name="password">123</field>
+        </record>
+    </data>
+</odoo>
